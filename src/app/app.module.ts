@@ -27,8 +27,11 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatListModule } from "@angular/material/list";
 import { MatCardModule } from "@angular/material/card";
 
+// Components
+import { NavComponent } from "./components/nav/nav.component";
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NavComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
