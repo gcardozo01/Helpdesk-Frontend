@@ -1,0 +1,39 @@
+.container {
+  height: 100%;
+}
+
+.side-nav {
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(37, 97, 207, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  color: white;
+  width: 13rem;
+}
+
+img {
+  margin: 0.8rem auto 1rem auto;
+  height: 7rem;
+  width: 100%;
+}
+
+.side-nav a {
+  color: white;
+}
+
+.side-nav i {
+  margin-right: 0.5rem;
+}
+
+.menu {
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(37, 97, 207, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  color: white;
+  margin: 1rem 0 0 1rem;
+}
