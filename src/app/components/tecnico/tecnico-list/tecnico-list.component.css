@@ -6,3 +6,17 @@
 table {
   width: 100%;
 }
+
+mat-form-field {
+  width: 100%;
+}
+
+button {
+  width: 100%;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  text-align: center;
+  width: 100%;
+}
