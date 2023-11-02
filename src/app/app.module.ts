@@ -40,6 +40,7 @@ import { TecnicoCreateComponent } from "./components/tecnico/tecnico-create/tecn
 
 // Mask
 import { NgxMaskModule } from "ngx-mask";
+import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecnico-update.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { NgxMaskModule } from "ngx-mask";
     TecnicoListComponent,
     LoginComponent,
     TecnicoCreateComponent,
+    TecnicoUpdateComponent,
   ],
   imports: [
     BrowserModule,
