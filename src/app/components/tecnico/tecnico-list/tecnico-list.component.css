@@ -20,3 +20,11 @@ h1 {
   text-align: center;
   width: 100%;
 }
+
+.edit {
+  color: #09b8f3;
+}
+
+.delete {
+  color: red;
+}
