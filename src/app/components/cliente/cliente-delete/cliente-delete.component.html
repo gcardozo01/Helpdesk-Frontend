@@ -1,10 +1,10 @@
 <div class="container mat-elevation-z8">
   <form class="form">
-    <h1>Deletar técnico</h1>
+    <h1>Deletar cliente</h1>
     <img
       class="fullwidth"
       src="assets/img/tecnico-create.svg"
-      alt="tecnico-create"
+      alt="cliente-create"
     />
 
     <section class="section">
@@ -15,14 +15,14 @@
         >Cliente</mat-checkbox
       >
       <mat-checkbox [disabled]="true" class="margin" color="primary"
-        >Técnico</mat-checkbox
+        >cliente</mat-checkbox
       >
     </section>
 
     <mat-form-field class="fullwidth" appearance="legacy">
       <mat-label>Nome</mat-label>
       <input
-        [(ngModel)]="tecnico.nome"
+        [(ngModel)]="cliente.nome"
         [disabled]="true"
         name="nome"
         matInput
@@ -32,14 +32,14 @@
 
     <mat-form-field class="fullwidth" appearance="legacy">
       <mat-label>CPF</mat-label>
-      <input [(ngModel)]="tecnico.cpf" name="cpf" [disabled]="true" matInput />
+      <input [(ngModel)]="cliente.cpf" name="cpf" [disabled]="true" matInput />
       <mat-icon matSuffix>pin</mat-icon>
     </mat-form-field>
 
     <mat-form-field class="fullwidth" appearance="legacy">
       <mat-label>Email</mat-label>
       <input
-        [(ngModel)]="tecnico.email"
+        [(ngModel)]="cliente.email"
         name="email"
         [disabled]="true"
         matInput
@@ -50,7 +50,7 @@
     <mat-form-field class="fullwidth" appearance="legacy">
       <mat-label>Senha</mat-label>
       <input
-        [(ngModel)]="tecnico.senha"
+        [(ngModel)]="cliente.senha"
         name="senha"
         [disabled]="true"
         matInput
