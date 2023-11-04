@@ -9,6 +9,7 @@ import { TecnicoCreateComponent } from "./components/tecnico/tecnico-create/tecn
 
 // Guard
 import { AuthGuard } from "./auth/auth.guard";
+import { TecnicoUpdateComponent } from "./components/tecnico/tecnico-update/tecnico-update.component";
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
@@ -25,6 +26,10 @@ const routes: Routes = [
       {
         path: "tecnicos/create",
         component: TecnicoCreateComponent,
+      },
+      {
+        path: "tecnicos/update/:id",
+        component: TecnicoUpdateComponent,
       },
     ],
   },
