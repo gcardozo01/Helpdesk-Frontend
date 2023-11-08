@@ -40,6 +40,8 @@ import { ClienteCreateComponent } from "./components/cliente/cliente-create/clie
 import { ClienteDeleteComponent } from "./components/cliente/cliente-delete/cliente-delete.component";
 import { ClienteListComponent } from "./components/cliente/cliente-list/cliente-list.component";
 import { ClienteUpdateComponent } from "./components/cliente/cliente-update/cliente-update.component";
+import { ChamadoListComponent } from "./components/chamado/chamado-list/chamado-list.component";
+import { ChamadoCreateComponent } from "./components/chamado/chamado-create/chamado-create.component";
 
 // Interceptor
 import { AuthInterceptorProvider } from "./interceptors/auth.interceptor";
@@ -47,7 +49,6 @@ import { TecnicoCreateComponent } from "./components/tecnico/tecnico-create/tecn
 
 // Mask
 import { NgxMaskModule } from "ngx-mask";
-import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-list.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-
     ClienteUpdateComponent,
     ClienteDeleteComponent,
     ChamadoListComponent,
+    ChamadoCreateComponent,
   ],
   imports: [
     BrowserModule,
