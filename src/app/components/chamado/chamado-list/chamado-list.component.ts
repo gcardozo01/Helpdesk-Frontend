@@ -56,6 +56,7 @@ export class ChamadoListComponent implements OnInit {
       return "ENCERRADO";
     }
   }
+
   retornaPrioridade(prioridade: any): string {
     if (prioridade == "0") {
       return "BAIXA";

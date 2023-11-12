@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormControl, Validators } from "@angular/forms";
-import { Router } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { ToastrService } from "ngx-toastr";
 
 // Models
@@ -44,12 +44,26 @@ export class ChamadoUpdateComponent implements OnInit {
     private clienteService: ClienteService,
     private tecnicoService: TecnicoService,
     private router: Router,
-    private toast: ToastrService
+    private toast: ToastrService,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
+    this.chamado.id = this.route.snapshot.paramMap.get("id");
+    this.findById();
     this.findAllClientes();
     this.findAllTecnicos();
+  }
+
+  findById(): void {
+    this.chamadoService.findById(this.chamado.id).subscribe(
+      (res) => {
+        this.chamado = res;
+      },
+      (err) => {
+        this.toast.error(err.error.error);
+      }
+    );
   }
 
   findAllClientes(): void {
@@ -64,10 +78,10 @@ export class ChamadoUpdateComponent implements OnInit {
     });
   }
 
-  create(): void {
+  update(): void {
     this.chamadoService.create(this.chamado).subscribe(
       (res) => {
-        this.toast.success("Chamado criado com sucesso", "Create");
+        this.toast.success("Chamado atualizado com sucesso", "Atualizar");
         this.router.navigate(["chamados"]);
       },
       (err) => {
@@ -85,5 +99,25 @@ export class ChamadoUpdateComponent implements OnInit {
       this.tecnico.valid &&
       this.cliente.valid
     );
+  }
+
+  retornaStatus(status: any): string {
+    if (status == "0") {
+      return "ABERTO";
+    } else if (status == "1") {
+      return "EM ANDAMENTO";
+    } else {
+      return "ENCERRADO";
+    }
+  }
+
+  retornaPrioridade(prioridade: any): string {
+    if (prioridade == "0") {
+      return "BAIXA";
+    } else if (prioridade == "1") {
+      return "MÉDIA";
+    } else {
+      return "ALTA";
+    }
   }
 }
