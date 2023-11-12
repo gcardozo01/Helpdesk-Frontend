@@ -37,3 +37,7 @@ img {
 button {
   margin-top: 1.5rem;
 }
+
+mat-icon {
+  opacity: 0.6;
+}
