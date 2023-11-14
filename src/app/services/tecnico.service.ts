@@ -6,7 +6,7 @@ import { Observable } from "rxjs";
 import { API_CONFIG } from "../config/api.config";
 
 // Models
-import { Tecnico } from "../models/tecnicos";
+import { Tecnico } from "../models/tecnico";
 
 @Injectable({
   providedIn: "root",

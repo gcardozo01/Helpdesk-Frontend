@@ -3,7 +3,7 @@ import { MatPaginator } from "@angular/material/paginator";
 import { MatTableDataSource } from "@angular/material/table";
 
 // Models
-import { Tecnico } from "src/app/models/tecnicos";
+import { Tecnico } from "src/app/models/tecnico";
 
 // Services
 import { TecnicoService } from "src/app/services/tecnico.service";

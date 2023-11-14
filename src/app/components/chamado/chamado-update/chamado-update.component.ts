@@ -6,7 +6,7 @@ import { ToastrService } from "ngx-toastr";
 // Models
 import { Chamado } from "src/app/models/chamado";
 import { Cliente } from "src/app/models/cliente";
-import { Tecnico } from "src/app/models/tecnicos";
+import { Tecnico } from "src/app/models/tecnico";
 
 // Services
 import { ChamadoService } from "src/app/services/chamado.service";

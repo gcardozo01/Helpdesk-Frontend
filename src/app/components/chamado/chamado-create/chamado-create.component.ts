@@ -4,7 +4,7 @@ import { Chamado } from "src/app/models/chamado";
 
 // Models
 import { Cliente } from "src/app/models/cliente";
-import { Tecnico } from "src/app/models/tecnicos";
+import { Tecnico } from "src/app/models/tecnico";
 
 // Services
 import { ClienteService } from "src/app/services/cliente.service";
