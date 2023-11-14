@@ -1,1 +1,104 @@
-<p>chamado-read works!</p>
+<div class="container mat-elevation-z8">
+  <h1>Visualizar chamado</h1>
+  <img
+    class="full-width"
+    src="assets/img/chamado-create.svg"
+    alt="chamado image"
+  />
+
+  <form class="form">
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Título do chamado</mat-label>
+      <input
+        [disabled]="true"
+        [(ngModel)]="chamado.titulo"
+        name="titulo"
+        matInput
+        required
+      />
+    </mat-form-field>
+  </form>
+
+  <div class="status-prioridade">
+    <mat-form-field appearance="outline">
+      <mat-label>STATUS ({{ retornaStatus(chamado.status) }})</mat-label>
+      <mat-select
+        [disabled]="true"
+        [(ngModel)]="chamado.status"
+        name="status"
+        required
+      >
+        <mat-option value="0">ABERTO</mat-option>
+        <mat-option value="1">EM ANDAMENTO</mat-option>
+        <mat-option value="2">ENCERRADO</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label
+        >PRIORIDADE ({{ retornaPrioridade(chamado.prioridade) }})</mat-label
+      >
+      <mat-select
+        [disabled]="true"
+        [(ngModel)]="chamado.prioridade"
+        name="prioridade"
+        required
+      >
+        <mat-option value="0">BAIXA</mat-option>
+        <mat-option value="1">MÉDIA</mat-option>
+        <mat-option value="2">ALTA</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="tecnico">
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>TÉCNICO ({{ chamado.nomeTecnico }})</mat-label>
+      <mat-select
+        [disabled]="true"
+        [(ngModel)]="chamado.tecnico"
+        name="tecnico"
+        required
+      >
+        <mat-option>{{ chamado.nomeTecnico }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="cliente">
+    <mat-form-field class="full-width" appearance="outline" required>
+      <mat-label>CLIENTE ({{ chamado.nomeCliente }})</mat-label>
+      <mat-select
+        [disabled]="true"
+        [(ngModel)]="chamado.cliente"
+        name="cliente"
+        required
+      >
+        <mat-option>{{ chamado.nomeCliente }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <form class="form">
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Deixe uma observação</mat-label>
+      <textarea
+        [disabled]="true"
+        [(ngModel)]="chamado.observacoes"
+        class="observacoes"
+        matInput
+        name="observacoes"
+        required
+      ></textarea>
+    </mat-form-field>
+  </form>
+
+  <button
+    routerLink="../../"
+    class="mat-elevation-z4 full-width"
+    mat-stroked-button
+    color="warn"
+  >
+    Retornar
+  </button>
+</div>
