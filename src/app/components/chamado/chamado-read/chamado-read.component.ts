@@ -1,12 +1,13 @@
+// Angular
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-import { ToastrService } from "ngx-toastr";
 
 // Models
 import { Chamado } from "src/app/models/chamado";
 
 // Services
 import { ChamadoService } from "src/app/services/chamado.service";
+import { ToastrService } from "ngx-toastr";
 
 @Component({
   selector: "app-chamado-read",

@@ -1,9 +1,13 @@
+// Angular
 import { Component, OnInit } from "@angular/core";
-import { FormControl, Validators } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
-import { ToastrService } from "ngx-toastr";
+
+// Models
 import { Cliente } from "src/app/models/cliente";
+
+// Services
 import { ClienteService } from "src/app/services/cliente.service";
+import { ToastrService } from "ngx-toastr";
 
 @Component({
   selector: "app-cliente-delete",
@@ -43,7 +47,7 @@ export class ClienteDeleteComponent implements OnInit {
   delete(): void {
     this.service.delete(this.cliente.id).subscribe(
       () => {
-        this.toast.success("cliente deletado com sucesso", "Delete");
+        this.toast.success("Cliente deletado com sucesso!", "Delete");
         this.router.navigate(["clientes"]);
       },
       (ex) => {

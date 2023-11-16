@@ -1,9 +1,14 @@
+// Angular
 import { Component, OnInit } from "@angular/core";
 import { FormControl, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
-import { ToastrService } from "ngx-toastr";
+
+// Models
 import { Cliente } from "src/app/models/cliente";
+
+// Services
 import { ClienteService } from "src/app/services/cliente.service";
+import { ToastrService } from "ngx-toastr";
 
 @Component({
   selector: "app-cliente-create",
@@ -37,7 +42,7 @@ export class ClienteCreateComponent implements OnInit {
   create(): void {
     this.clienteService.create(this.cliente).subscribe(
       () => {
-        this.toast.success("cliente cadastrado com sucesso", "Cadastro");
+        this.toast.success("Cliente cadastrado com sucesso!", "Cadastro");
         this.router.navigate(["clientes"]);
       },
       (err) => {

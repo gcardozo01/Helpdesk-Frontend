@@ -1,9 +1,14 @@
+// Angular
 import { Component, OnInit } from "@angular/core";
 import { FormControl, Validators } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
-import { ToastrService } from "ngx-toastr";
+
+// Models
 import { Cliente } from "src/app/models/cliente";
+
+// Services
 import { ClienteService } from "src/app/services/cliente.service";
+import { ToastrService } from "ngx-toastr";
 
 @Component({
   selector: "app-cliente-update",
@@ -48,7 +53,7 @@ export class ClienteUpdateComponent implements OnInit {
   update(): void {
     this.service.update(this.cliente).subscribe(
       () => {
-        this.toast.success("cliente atualizado com sucesso", "Update");
+        this.toast.success("Cliente atualizado com sucesso!", "Update");
         this.router.navigate(["clientes"]);
       },
       (ex) => {

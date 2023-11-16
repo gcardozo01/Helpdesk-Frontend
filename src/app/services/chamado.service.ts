@@ -1,8 +1,15 @@
+// Angular
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
-import { Chamado } from "../models/chamado";
+
+// Config
 import { API_CONFIG } from "../config/api.config";
+
+// Models
+import { Chamado } from "../models/chamado";
+
+// RXJS
+import { Observable } from "rxjs";
 
 @Injectable({
   providedIn: "root",

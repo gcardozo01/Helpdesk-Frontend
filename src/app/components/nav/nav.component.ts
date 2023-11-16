@@ -1,9 +1,10 @@
+// Angular
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
-import { ToastrService } from "ngx-toastr";
 
 // Services
 import { AuthService } from "src/app/services/auth.service";
+import { ToastrService } from "ngx-toastr";
 
 @Component({
   selector: "app-nav",
@@ -24,6 +25,6 @@ export class NavComponent implements OnInit {
   logout() {
     this.router.navigate(["login"]);
     this.authService.logout();
-    this.toast.info("Logout realizado com sucesso", "Logout");
+    this.toast.info("Logout realizado com sucesso!", "Logout");
   }
 }

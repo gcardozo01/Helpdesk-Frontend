@@ -1,7 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormControl, Validators } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
-import { ToastrService } from "ngx-toastr";
 
 // Models
 import { Chamado } from "src/app/models/chamado";
@@ -12,6 +11,7 @@ import { Tecnico } from "src/app/models/tecnico";
 import { ChamadoService } from "src/app/services/chamado.service";
 import { ClienteService } from "src/app/services/cliente.service";
 import { TecnicoService } from "src/app/services/tecnico.service";
+import { ToastrService } from "ngx-toastr";
 
 @Component({
   selector: "app-chamado-update",
@@ -81,7 +81,7 @@ export class ChamadoUpdateComponent implements OnInit {
   update(): void {
     this.chamadoService.create(this.chamado).subscribe(
       (res) => {
-        this.toast.success("Chamado atualizado com sucesso", "Atualizar");
+        this.toast.success("Chamado atualizado com sucesso!", "Atualizar");
         this.router.navigate(["chamados"]);
       },
       (err) => {

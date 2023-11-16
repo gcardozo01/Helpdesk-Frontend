@@ -1,9 +1,13 @@
+// Angular
 import { Component, OnInit } from "@angular/core";
-import { FormControl, Validators } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
-import { ToastrService } from "ngx-toastr";
+
+// Models
 import { Tecnico } from "src/app/models/tecnico";
+
+// Services
 import { TecnicoService } from "src/app/services/tecnico.service";
+import { ToastrService } from "ngx-toastr";
 
 @Component({
   selector: "app-tecnico-delete",
@@ -43,7 +47,7 @@ export class TecnicoDeleteComponent implements OnInit {
   delete(): void {
     this.service.delete(this.tecnico.id).subscribe(
       () => {
-        this.toast.success("Técnico deletado com sucesso", "Delete");
+        this.toast.success("Técnico deletado com sucesso!", "Delete");
         this.router.navigate(["tecnicos"]);
       },
       (ex) => {

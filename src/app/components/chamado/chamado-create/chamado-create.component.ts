@@ -1,17 +1,18 @@
+// Angular
 import { Component, OnInit } from "@angular/core";
 import { FormControl, Validators } from "@angular/forms";
-import { Chamado } from "src/app/models/chamado";
+import { Router } from "@angular/router";
 
 // Models
 import { Cliente } from "src/app/models/cliente";
 import { Tecnico } from "src/app/models/tecnico";
+import { Chamado } from "src/app/models/chamado";
 
 // Services
 import { ClienteService } from "src/app/services/cliente.service";
 import { TecnicoService } from "src/app/services/tecnico.service";
 import { ChamadoService } from "src/app/services/chamado.service";
 import { ToastrService } from "ngx-toastr";
-import { Router, RouterState } from "@angular/router";
 
 @Component({
   selector: "app-chamado-create",
@@ -67,7 +68,7 @@ export class ChamadoCreateComponent implements OnInit {
   create(): void {
     this.chamadoService.create(this.chamado).subscribe(
       (res) => {
-        this.toast.success("Chamado criado com sucesso", "Create");
+        this.toast.success("Chamado criado com sucesso!", "Create");
         this.router.navigate(["chamados"]);
       },
       (err) => {
